@@ -18,7 +18,8 @@
   "homepage": "https://github.com/shurikdurik/frontend-project-lvl1#readme",
   "type": "module",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "dependencies": {
     "eslint": "^7.18.0",
@@ -31,4 +32,5 @@
     "babel-eslint": "^10.1.0",
     "eslint-plugin-jest": "^24.1.3"
   }
+  
 }
