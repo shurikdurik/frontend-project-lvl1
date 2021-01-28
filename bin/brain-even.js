@@ -14,7 +14,7 @@ export default function game() {
       console.log('Correct!');
     } else {
       count = 0;
-      console.log(`'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again ${name}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${realAnswer}'. Let's try again ${name}!`);
     }
   }
   if (count === 3) {
