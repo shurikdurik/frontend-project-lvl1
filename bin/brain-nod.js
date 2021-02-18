@@ -1,11 +1,15 @@
-/* eslint-disable no-eval */
-const calc = () => {
+function NOD(x, y) {
+  if (y > x) return NOD(y, x);
+  if (!y) return x;
+  return NOD(y, x % y);
+}
+
+const nod = () => {
   const greet = 'What is the result of the expression?';
   const num1 = Math.round(Math.random() * 10);
   const num2 = Math.round(Math.random() * 10);
-  const arr = ['+', '-', '*'];
-  const expr = num1 + arr[Math.round(Math.random() * 2)] + num2;
-  const realAnsw = String(eval(expr));
+  const expr = `${num1}, ${num2}`;
+  const realAnsw = String(NOD(num1, num2));
   return {
     greeteng: greet,
     expression: expr,
@@ -13,4 +17,4 @@ const calc = () => {
   };
 };
 
-export default calc;
+export default nod;

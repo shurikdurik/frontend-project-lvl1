@@ -1,5 +1,3 @@
-function helloFun(name) {
+export default function helloFun(name) {
   console.log(`Hello, ${name}!`);
 }
-
-export { helloFun };
