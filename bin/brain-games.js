@@ -1,17 +1,26 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { helloFun } from '../src/cli.js';
-import even from './brain-even.js';
-import calc from './brain-calc.js';
 
-export default function app() {
-  console.log('Welcome to Brain Games');
-  helloFun();
-  const choose = readlineSync.question('Please, choose the game ("calc" or "even"): ');
-  if (choose === 'calc') {
-    return calc();
+let count = 0;
+
+export default function gameEngine(fun, nam) {
+  let obj = fun();
+  console.log(obj.greeteng);
+  for (; count < 3;) {
+    const expr = obj.expression;
+    const realAnsw = obj.realAnswer;
+    console.log(`Question: ${expr}`);
+    const answer = readlineSync.question('Your answer: ');
+    if (answer === realAnsw) {
+      obj = fun();
+      count += 1;
+      console.log('Correct!');
+    } else {
+      count = 0;
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${realAnsw}'. Let's try again ${nam}!`);
+    }
   }
-  if (choose === 'even') {
-    return even();
+  if (count === 3) {
+    console.log(`Congratulations, ${nam}!`);
   }
 }
