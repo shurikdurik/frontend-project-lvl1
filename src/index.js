@@ -5,13 +5,14 @@ import calc from '../bin/brain-calc.js';
 import nod from '../bin/brain-nod.js';
 import gameEngine from '../bin/brain-games.js';
 import helloFun from './cli.js';
+import progression from '../bin/brain-progression.js';
 
 console.log('Welcome to Brain Games');
 const name = readlineSync.question('May I have your name? ');
 helloFun(name);
 
 function app() {
-  const choose = readlineSync.question('Please, choose the game ("calc" or "even" or "nod"): ');
+  const choose = readlineSync.question('Please, choose the game ("calc" or "even" or "nod" or "progress"): ');
   if (choose === 'calc') {
     gameEngine(calc, name);
   }
@@ -20,6 +21,9 @@ function app() {
   }
   if (choose === 'nod') {
     gameEngine(nod, name);
+  }
+  if (choose === 'progress') {
+    gameEngine(progression, name);
   }
 }
 
