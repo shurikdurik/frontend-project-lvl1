@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+
 const progress = (elem, n) => {
   const arr = [];
   for (let i = 0; i < n; i += 1) {
