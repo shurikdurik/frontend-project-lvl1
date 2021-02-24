@@ -17,7 +17,7 @@ export default function gameEngine(fun, nam) {
       console.log('Correct!');
     } else {
       count = 0;
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${realAnsw}'. Let's try again ${nam}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${realAnsw}'. Let's try again, ${nam}!`);
     }
   }
   if (count === 3) {
