@@ -5,7 +5,7 @@ export default function gameEngine(fun, nam) {
   let count = 0;
   let obj = fun();
   console.log(obj.greeteng);
-  for (; count < 3;) {
+  while (count < 3) {
     const expr = obj.expression;
     const realAnsw = obj.realAnswer;
     console.log(`Question: ${expr}`);
