@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-let count = 0;
-
 export default function gameEngine(fun, nam) {
+  let count = 0;
   let obj = fun();
   console.log(obj.greeteng);
   for (; count < 3;) {
